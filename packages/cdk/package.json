@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Hello, World with localstack and AWS CDK",
   "scripts": {
+    "start": "pnpm bootstraplocal && pnpm deploylocal",
     "format": "prettier --write .",
     "aws": "dotenv -- aws",
     "awslocal": "AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566",

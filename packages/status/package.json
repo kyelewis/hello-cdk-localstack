@@ -4,12 +4,14 @@
   "main": "dist/index.js",
   "description": "Status lambda handler for the stack",
   "scripts": {
+    "format": "prettier --write .",
     "build": "esbuild --platform=node --bundle --external:pg-native --outdir=dist src/index.ts"
   },
   "license": "ISC",
   "devDependencies": {
     "aws-sdk": "2.1368.0",
     "esbuild": "0.17.18",
-    "pg": "8.10.0"
+    "pg": "8.10.0",
+    "prettier": "2.8.8"
   }
 }
