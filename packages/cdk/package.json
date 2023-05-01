@@ -1,0 +1,30 @@
+{
+  "name": "@hello-cdk-localstack/cdk",
+  "version": "1.0.0",
+  "description": "Hello, World with localstack and AWS CDK",
+  "scripts": {
+    "format": "prettier --write .",
+    "aws": "dotenv -- aws",
+    "awslocal": "AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566",
+    "deploy": "cdk deploy",
+    "deploylocal": "cdklocal deploy",
+    "bootstrap": "cdk bootstrap",
+    "bootstraplocal": "cdklocal bootstrap",
+    "synth": "cdk synth",
+    "synthlocal": "cdklocal synth"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.77.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.77.0-alpha.0",
+    "@hello-cdk-localstack/status": "workspace:*",
+    "aws-cdk": "2.77.0",
+    "aws-cdk-lib": "2.77.0",
+    "aws-cdk-local": "2.18.0",
+    "constructs": "10.2.12",
+    "dotenv-cli": "7.2.1",
+    "esbuild": "0.17.18",
+    "esbuild-register": "3.4.2",
+    "prettier": "2.8.8"
+  }
+}

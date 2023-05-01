@@ -1,0 +1,15 @@
+{
+  "name": "@hello-cdk-localstack/status",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "description": "Status lambda handler for the stack",
+  "scripts": {
+    "build": "esbuild --platform=node --bundle --external:pg-native --outdir=dist src/index.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "2.1368.0",
+    "esbuild": "0.17.18",
+    "pg": "8.10.0"
+  }
+}
