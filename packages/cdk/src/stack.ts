@@ -104,8 +104,6 @@ export class CdkHelloStack extends Stack {
     const helloApi = new HttpApi(this, "hello-api");
 
     // Create a lambda function
-    // @todo resolve the workspace package and get the index.ts from there
-
     const statusLambda = new NodejsFunction(this, "status-lambda", {
       runtime: Runtime.NODEJS_18_X,
       entry: require.resolve("@hello-cdk-localstack/status"),
