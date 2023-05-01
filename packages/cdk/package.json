@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hello, World with localstack and AWS CDK",
   "scripts": {
-    "start": "pnpm bootstrap-local && pnpm deploy-local",
+    "start": "pnpm bootstrap-local && pnpm deploy-local && pnpm open-local",
     "format": "prettier --write .",
     "aws": "dotenv -- aws",
     "aws-local": "AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566",
@@ -12,7 +12,9 @@
     "bootstrap": "cdk bootstrap",
     "bootstrap-local": "cdklocal bootstrap",
     "synth": "cdk synth",
-    "synth-local": "cdklocal synth"
+    "synth-local": "cdklocal synth",
+    "open": "opener http://$(aws apigatewayv2 get-apis | jq .Items[0].ApiEndpoint -r)",
+    "open-local": "opener http://$(pnpm --silent aws-local -- apigatewayv2 get-apis | jq .Items[0].ApiEndpoint -r)"
   },
   "license": "MIT",
   "devDependencies": {
@@ -26,6 +28,7 @@
     "dotenv-cli": "7.2.1",
     "esbuild": "0.17.18",
     "esbuild-register": "3.4.2",
+    "opener": "1.5.2",
     "prettier": "2.8.8"
   }
 }
