@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "Hello, World with localstack and AWS CDK",
   "scripts": {
-    "start": "pnpm bootstraplocal && pnpm deploylocal",
+    "start": "pnpm bootstrap-local && pnpm deploy-local",
     "format": "prettier --write .",
     "aws": "dotenv -- aws",
-    "awslocal": "AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566",
+    "aws-local": "AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566",
     "deploy": "cdk deploy",
-    "deploylocal": "cdklocal deploy",
+    "deploy-local": "cdklocal deploy",
     "bootstrap": "cdk bootstrap",
-    "bootstraplocal": "cdklocal bootstrap",
+    "bootstrap-local": "cdklocal bootstrap",
     "synth": "cdk synth",
-    "synthlocal": "cdklocal synth"
+    "synth-local": "cdklocal synth"
   },
   "license": "MIT",
   "devDependencies": {
